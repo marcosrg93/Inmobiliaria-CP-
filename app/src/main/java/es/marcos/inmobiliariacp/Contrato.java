@@ -13,7 +13,6 @@ public class Contrato {
         public static final String DIRECCION = "direccion";
         public static final String TIPO = "tipo";
         public static final String PRECIO = "precio";
-        public static final String SUBIDO = "subido";
         public static final String CONTENT_TYPE_INMUEBLES =
                 "vnd.android.cursor.dir/vnd.inmuebles";
         public static final String CONTENT_TYPE_INMUEBLE_ID =
