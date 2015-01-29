@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -41,6 +42,7 @@ public class Principal extends Activity {
     private final int ACTIVIDAD2=1;
     private ListView lv;
     private int imgActual;
+    private CheckBox cb;
 
 
 
@@ -59,6 +61,8 @@ public class Principal extends Activity {
 
 
 
+
+
         inmuebles = new ArrayList<Inmueble>();
         gi=new GestorInmuebles(this);
         gi.open();
@@ -67,6 +71,7 @@ public class Principal extends Activity {
         lv=(ListView)findViewById(R.id.listView);
         ac=new AdaptadorCursor(this, cursor);
         lv.setAdapter(ac);
+        cb = (CheckBox) findViewById(R.id.checkBox);
         imgActual = 0;
         final Fragmento2 fdos=(Fragmento2)getFragmentManager().findFragmentById(R.id.fragment_2);
         final boolean horizontal;
@@ -453,6 +458,13 @@ public class Principal extends Activity {
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uriSavedImage);
         startActivityForResult(cameraIntent, ACTIVIDAD2);
         return true;
+    }
+
+    public  boolean subido(){
+        if (cb.isChecked()) {
+            cb.setChecked(true);
+        }
+        return cb.isChecked();
     }
 
 }

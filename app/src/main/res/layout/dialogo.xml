@@ -70,4 +70,20 @@
             android:layout_weight="0.90" />
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Subido"
+        android:weightSum="1">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subido"
+            android:id="@+id/checkBox"
+            android:checked="false"
+            android:layout_weight="0.19" />
+    </LinearLayout>
+
 </LinearLayout>

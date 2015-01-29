@@ -9,6 +9,7 @@ public class Inmueble implements Parcelable,Comparable<Inmueble> {
     private String direccion;
     private String tipo;
     private double precio;
+    private  boolean subido= false;
     public static final Creator<Inmueble> CREATOR = new Creator<Inmueble>() {
         @Override
         public Inmueble createFromParcel(Parcel p) {
@@ -70,6 +71,10 @@ public class Inmueble implements Parcelable,Comparable<Inmueble> {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public void setSubido() {
+        this.subido = true;
     }
 
     @Override
